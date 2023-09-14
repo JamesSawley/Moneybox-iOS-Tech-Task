@@ -4,11 +4,13 @@ class AppCoordinator {
     
     lazy var rootViewController = UINavigationController(rootViewController: launchAnimationController)
     
-    private lazy var launchAnimationController: LaunchAnimationController = {
+    private var homeViewModel: HomeViewModel?
+    
+    private var launchAnimationController: LaunchAnimationController {
         let viewController = LaunchAnimationController()
         viewController.coordinator = self
         return viewController
-    }()
+    }
         
     func navigateToLogin() {
         let storyboard = UIStoryboard(name: "Login", bundle: .main)
