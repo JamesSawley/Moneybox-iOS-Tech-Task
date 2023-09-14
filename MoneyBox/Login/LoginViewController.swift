@@ -5,7 +5,9 @@ class LoginViewController: UIViewController {
     // TODO: Create Coordinator?
     private lazy var viewModel = LoginViewModel()
 
+    @IBOutlet private weak var emailLabel: UILabel!
     @IBOutlet private weak var emailTextField: LoginTextField!
+    @IBOutlet private weak var passwordLabel: UILabel!
     @IBOutlet private weak var passwordTextField: LoginTextField!
     @IBOutlet private weak var authenticateButton: RoundedButton!
     
@@ -26,9 +28,15 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
         
     private func configureViews() {
+        configure(emailLabel, type: .email)
         configure(emailTextField, type: .email)
+        configure(passwordLabel, type: .password)
         configure(passwordTextField, type: .password)
         configure(authenticateButton)
+    }
+    
+    private func configure(_ label: UILabel, type: LoginFieldType) {
+        label.text = type.label
     }
     
     private func configure(_ textField: LoginTextField, type: LoginFieldType) {
