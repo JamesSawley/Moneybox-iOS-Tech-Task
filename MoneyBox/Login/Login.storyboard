@@ -56,6 +56,12 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pig-TE-RmN">
+                                <rect key="frame" x="16" y="775" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq5-8W-Gfx" customClass="RoundedButton" customModule="MoneyBox" customModuleProvider="target">
                                 <rect key="frame" x="16" y="811.5" width="382" height="34.5"/>
                                 <state key="normal" title="Button"/>
@@ -69,12 +75,15 @@
                         <color key="backgroundColor" name="GreyColor"/>
                         <constraints>
                             <constraint firstItem="uXR-TJ-fy2" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="64" id="8OB-Wx-7zB"/>
+                            <constraint firstItem="Pig-TE-RmN" firstAttribute="trailing" secondItem="KNG-cV-Q8n" secondAttribute="trailing" id="EA3-rY-BwL"/>
+                            <constraint firstItem="Pig-TE-RmN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rxA-eW-sJQ" secondAttribute="bottom" constant="16" id="Fs8-lr-u6J"/>
                             <constraint firstItem="Uq5-8W-Gfx" firstAttribute="leading" secondItem="KNG-cV-Q8n" secondAttribute="leading" id="O7l-f6-ioe"/>
                             <constraint firstItem="KNG-cV-Q8n" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="16" id="PFK-Ep-YZ6"/>
+                            <constraint firstItem="Pig-TE-RmN" firstAttribute="leading" secondItem="KNG-cV-Q8n" secondAttribute="leading" id="Vv0-ES-JZD"/>
                             <constraint firstItem="KNG-cV-Q8n" firstAttribute="top" secondItem="uXR-TJ-fy2" secondAttribute="bottom" constant="64" id="Xbb-Gj-YaF"/>
+                            <constraint firstItem="Uq5-8W-Gfx" firstAttribute="top" secondItem="Pig-TE-RmN" secondAttribute="bottom" constant="16" id="ca9-aR-7n1"/>
                             <constraint firstItem="rxA-eW-sJQ" firstAttribute="trailing" secondItem="KNG-cV-Q8n" secondAttribute="trailing" id="d68-Fk-xzv"/>
                             <constraint firstItem="uXR-TJ-fy2" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="dsH-Rw-9QR"/>
-                            <constraint firstItem="Uq5-8W-Gfx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rxA-eW-sJQ" secondAttribute="bottom" constant="16" id="frI-x5-atc"/>
                             <constraint firstItem="rxA-eW-sJQ" firstAttribute="leading" secondItem="KNG-cV-Q8n" secondAttribute="leading" id="j5c-oJ-uTZ"/>
                             <constraint firstItem="rxA-eW-sJQ" firstAttribute="top" secondItem="KNG-cV-Q8n" secondAttribute="bottom" constant="16" id="jOa-Tz-0dh"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="KNG-cV-Q8n" secondAttribute="trailing" constant="16" id="jzp-ch-lVi"/>
@@ -86,6 +95,7 @@
                         <outlet property="authenticateButton" destination="Uq5-8W-Gfx" id="RNf-fp-9HF"/>
                         <outlet property="emailLabel" destination="bcM-Ws-4jS" id="xHA-h6-6ov"/>
                         <outlet property="emailTextField" destination="ngx-PZ-nqz" id="zdB-Ry-vrk"/>
+                        <outlet property="errorLabel" destination="Pig-TE-RmN" id="F1G-1k-14e"/>
                         <outlet property="passwordLabel" destination="8ro-FB-kYW" id="OLQ-ae-0xE"/>
                         <outlet property="passwordTextField" destination="6wq-tW-c7I" id="BOB-Fk-rFH"/>
                     </connections>

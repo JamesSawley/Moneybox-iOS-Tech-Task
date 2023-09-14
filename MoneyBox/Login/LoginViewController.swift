@@ -9,11 +9,13 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var emailTextField: LoginTextField!
     @IBOutlet private weak var passwordLabel: UILabel!
     @IBOutlet private weak var passwordTextField: LoginTextField!
+    @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var authenticateButton: RoundedButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.delegate = self
         configureViews()
     }
     
@@ -32,11 +34,19 @@ extension LoginViewController {
         configure(emailTextField, type: .email)
         configure(passwordLabel, type: .password)
         configure(passwordTextField, type: .password)
+        configure(errorLabel)
         configure(authenticateButton)
     }
     
     private func configure(_ label: UILabel, type: LoginFieldType) {
         label.text = type.label
+    }
+    
+    private func configure(_ errorLabel: UILabel) {
+        errorLabel.numberOfLines = 0
+        errorLabel.font = .preferredFont(forTextStyle: .body)
+        errorLabel.textColor = .systemRed
+        errorLabel.isHidden = true
     }
     
     private func configure(_ textField: LoginTextField, type: LoginFieldType) {
@@ -78,5 +88,18 @@ extension LoginViewController: UITextFieldDelegate {
             return
         }
         loginTextField.updateForEditing()
+    }
+}
+
+extension LoginViewController: LoginViewModelDelegate {
+    func showError(message: String) {
+        errorLabel.text = message
+        errorLabel.isHidden = false
+        
+        // Dismiss the error after a short time
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.errorLabel.isHidden = true
+            self.errorLabel.text = nil
+        }
     }
 }
