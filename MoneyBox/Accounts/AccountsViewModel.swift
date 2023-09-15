@@ -45,8 +45,8 @@ class AccountsViewModel: ObservableObject {
         }
     }
     
-    func didTap(product: ProductResponse) {
-        coordinator?.showDetail(for: product)
+    func didTap(account: AccountSummary) {
+        coordinator?.showDetail(for: account)
     }
     
     func finish() {

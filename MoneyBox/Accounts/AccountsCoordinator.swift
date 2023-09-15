@@ -30,7 +30,14 @@ class AccountsCoordinator: Coordinator {
 }
 
 extension AccountsCoordinator {
-    func showDetail(for product: ProductResponse) {
-        // TODO: Present detail screen
+    func showDetail(for account: AccountSummary) {
+        let viewModel = AccountDetailsViewModel(accountSummary: account)
+        let view = AccountDetailsView(viewModel: viewModel)
+        let hostingController = UIHostingController(rootView: view)
+        rootViewController.present(hostingController, animated: true)
+    }
+    
+    func prefetchData() {
+        viewModel.fetchAccounts()
     }
 }

@@ -32,6 +32,11 @@ public extension AppNetworkable {
     }
     
     func fetchResponse<V: Decodable>(completion: @escaping ((Result<V, Error>) -> Void)) {
+        print(request)
+        print(request.allHTTPHeaderFields)
+        if let body = request.httpBody {
+            print(String(data: body, encoding: .utf8))
+        }
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data else {

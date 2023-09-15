@@ -75,6 +75,9 @@ struct AccountsView: View {
         .frame(maxWidth: .infinity)
         .background(Color.grey)
         .cornerRadius(8)
+        .onTapGesture {
+            viewModel.didTap(account: account)
+        }
     }
 }
 

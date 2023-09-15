@@ -5,7 +5,7 @@ struct AccountSummary: Identifiable {
     let id: Int
     let name: String
     let planValue: Double
-    let moneybox: Double
+    var moneybox: Double
     
     var planValueString: String {
         "Plan Value: \(planValue.currencyString)"
@@ -13,6 +13,10 @@ struct AccountSummary: Identifiable {
     
     var moneyboxString: String {
         "Moneybox: \(moneybox.currencyString)"
+    }
+    
+    static var preview: Self {
+        .init(id: 0, name: "Stocks and Shares ISA", planValue: 1000.00, moneybox: 50.00)
     }
 }
 
@@ -30,8 +34,8 @@ extension ProductResponse {
             return nil
         }
         return AccountSummary(id: id,
-                             name: name,
-                             planValue: planValue ?? 0,
-                             moneybox: moneybox ?? 0)
+                              name: name,
+                              planValue: planValue ?? 0,
+                              moneybox: moneybox ?? 0)
     }
 }
