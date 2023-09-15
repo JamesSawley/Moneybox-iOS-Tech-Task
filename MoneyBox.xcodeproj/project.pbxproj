@@ -24,6 +24,8 @@
 		CBC616CC2AB36FF100420E5B /* DataProviderLogicMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616CB2AB36FF100420E5B /* DataProviderLogicMock.swift */; };
 		CBC616CE2AB37F8F00420E5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616CD2AB37F8F00420E5B /* AppCoordinator.swift */; };
 		CBC616D02AB37FD600420E5B /* LaunchAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */; };
+		CBC617002AB4CF3300420E5B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616FF2AB4CF3300420E5B /* Coordinator.swift */; };
+		CBC617022AB4CF6100420E5B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC617012AB4CF6100420E5B /* LoginCoordinator.swift */; };
 		CBD04B1D2AB226F4007B27CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CBD04B1C2AB226F4007B27CD /* README.md */; };
 		CBD04B202AB228C5007B27CD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD04B1F2AB228C5007B27CD /* LoginViewModel.swift */; };
 		CBD04B222AB22C00007B27CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD04B212AB22C00007B27CD /* User.swift */; };
@@ -60,6 +62,8 @@
 		CBC616CB2AB36FF100420E5B /* DataProviderLogicMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderLogicMock.swift; sourceTree = "<group>"; };
 		CBC616CD2AB37F8F00420E5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimationController.swift; sourceTree = "<group>"; };
+		CBC616FF2AB4CF3300420E5B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CBC617012AB4CF6100420E5B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		CBD04B1C2AB226F4007B27CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CBD04B1F2AB228C5007B27CD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CBD04B212AB22C00007B27CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				B2CA46D92793508A0041B3A5 /* Info.plist */,
 				CBC616CD2AB37F8F00420E5B /* AppCoordinator.swift */,
 				B2CA46CB279350880041B3A5 /* AppDelegate.swift */,
+				CBC616FF2AB4CF3300420E5B /* Coordinator.swift */,
 				CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */,
 				CBC616C22AB365B800420E5B /* UIColor+Extension.swift */,
 				CBD04B212AB22C00007B27CD /* User.swift */,
@@ -169,10 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				B228EA6A2880B30B00B35F16 /* Login.storyboard */,
+				CBC617012AB4CF6100420E5B /* LoginCoordinator.swift */,
+				CBC616C42AB367FC00420E5B /* LoginFieldType.swift */,
+				CBC616BD2AB3651600420E5B /* LoginTextField.swift */,
 				B228EA692880B30B00B35F16 /* LoginViewController.swift */,
 				CBD04B1F2AB228C5007B27CD /* LoginViewModel.swift */,
-				CBC616BD2AB3651600420E5B /* LoginTextField.swift */,
-				CBC616C42AB367FC00420E5B /* LoginFieldType.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 				CBC616C32AB365B800420E5B /* UIColor+Extension.swift in Sources */,
 				B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */,
 				CBC616D02AB37FD600420E5B /* LaunchAnimationController.swift in Sources */,
+				CBC617022AB4CF6100420E5B /* LoginCoordinator.swift in Sources */,
+				CBC617002AB4CF3300420E5B /* Coordinator.swift in Sources */,
 				CBD04B202AB228C5007B27CD /* LoginViewModel.swift in Sources */,
 				CBC616CE2AB37F8F00420E5B /* AppCoordinator.swift in Sources */,
 				CBC616C52AB367FC00420E5B /* LoginFieldType.swift in Sources */,

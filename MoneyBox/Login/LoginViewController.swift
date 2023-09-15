@@ -2,8 +2,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // TODO: Create Coordinator?
-    private lazy var viewModel = LoginViewModel()
+    // Force unwrap since this would be a developer error
+    var viewModel: LoginViewModel!
 
     @IBOutlet private weak var emailLabel: UILabel!
     @IBOutlet private weak var emailTextField: LoginTextField!

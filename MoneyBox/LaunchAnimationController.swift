@@ -40,7 +40,7 @@ class LaunchAnimationController: UIViewController {
             self.finalYAnchor.isActive = true
             self.view.layoutIfNeeded()
         } completion: { _ in
-            self.coordinator?.navigateToLogin()
+            self.coordinator?.endLaunch()
         }
     }
 }

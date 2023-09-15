@@ -8,6 +8,7 @@ protocol LoginViewModelDelegate: AnyObject {
 class LoginViewModel {
     
     weak var delegate: LoginViewModelDelegate?
+    weak var coordinator: LoginCoordinator?
     
     private let dataProvider: DataProviderLogic
     
@@ -55,6 +56,7 @@ class LoginViewModel {
         print("Authenticated: ", response)
         Authentication.token = response.session.bearerToken
         UserProvider.user = response.user
+        coordinator?.finish()
     }
 }
 

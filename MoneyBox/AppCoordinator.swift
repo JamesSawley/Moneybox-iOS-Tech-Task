@@ -1,22 +1,47 @@
 import UIKit
 
-class AppCoordinator {
+class AppCoordinator: Coordinator {
+    
+    let window: UIWindow?
     
     lazy var rootViewController = UINavigationController(rootViewController: launchAnimationController)
-    
-    private var homeViewModel: HomeViewModel?
-    
+        
     private var launchAnimationController: LaunchAnimationController {
         let viewController = LaunchAnimationController()
         viewController.coordinator = self
         return viewController
     }
-        
-    func navigateToLogin() {
-        let storyboard = UIStoryboard(name: "Login", bundle: .main)
-        let viewController = storyboard.instantiateViewController(identifier: "LoginViewController") as? LoginViewController
-        
-        guard let viewController else { return }
-        rootViewController.viewControllers = [viewController]
+    
+    init(window: UIWindow?) {
+        self.window = window
+    }
+    
+    override func start() {
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
+    }
+    
+    override func finish() {
+        preconditionFailure("App coordinator should not finish")
+    }
+}
+
+extension AppCoordinator {
+    func endLaunch() {
+        let loginCoordinator = LoginCoordinator(rootViewController: rootViewController, delegate: self)
+        addChildCoordinator(loginCoordinator)
+        loginCoordinator.start()
+    }
+    
+    func navigateToAccounts() {
+        // TODO
+        rootViewController.viewControllers = [UIViewController()]
+    }
+}
+
+extension AppCoordinator: LoginCoordinatorDelegate {
+    func didFinish(from coordinator: LoginCoordinator) {
+        navigateToAccounts()
+        removeChildCoordinator(coordinator)
     }
 }
