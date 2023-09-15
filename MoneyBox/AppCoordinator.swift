@@ -20,10 +20,18 @@ class AppCoordinator: Coordinator {
     override func start() {
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
+        
+        ConcreteSessionManager.shared.delegate = self
     }
     
     override func finish() {
         preconditionFailure("App coordinator should not finish")
+    }
+}
+
+extension AppCoordinator: SessionManagerDelegate {
+    func logout() {
+        navigateToLogin()
     }
 }
 

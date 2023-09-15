@@ -11,13 +11,15 @@ class LoginViewModel {
     weak var coordinator: LoginCoordinator?
     
     private let dataProvider: DataProviderLogic
+    private let sessionManager: SessionManager
     
     convenience init() {
-        self.init(dataProvider: DataProvider())
+        self.init(dataProvider: DataProvider(), sessionManager: ConcreteSessionManager.shared)
     }
     
-    init(dataProvider: DataProviderLogic) {
+    init(dataProvider: DataProviderLogic, sessionManager: SessionManager) {
         self.dataProvider = dataProvider
+        self.sessionManager = sessionManager
     }
     
     func authenticate(email: String?, password: String?) {
@@ -53,7 +55,7 @@ class LoginViewModel {
     }
     
     private func authenticated(response: LoginResponse) {
-        Authentication.token = response.session.bearerToken
+        sessionManager.setUserToken(response.session.bearerToken)
         UserProvider.user = response.user
         coordinator?.finish()
     }
