@@ -2,7 +2,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // Force unwrap since this would be a developer error
+    // Force unwrap since the view controller doesn't make sense without a view model.
+    // This would be a developer error.
     var viewModel: LoginViewModel!
 
     @IBOutlet private weak var emailLabel: UILabel!
@@ -17,6 +18,10 @@ class LoginViewController: UIViewController {
         
         viewModel.delegate = self
         configureViews()
+        
+        #if DEBUG
+        addDebugGesture()
+        #endif
     }
     
     @IBAction private func authenticate() {
@@ -25,6 +30,19 @@ class LoginViewController: UIViewController {
         }
         viewModel.authenticate(email: email, password: password)
     }
+    
+    #if DEBUG
+    private func addDebugGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(debugAuthenticate))
+        tapGesture.numberOfTapsRequired = 3
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func debugAuthenticate() {
+        viewModel.authenticate(email: "test+ios2@moneyboxapp.com",
+                               password: "P455word12")
+    }
+    #endif
 }
 
 extension LoginViewController {

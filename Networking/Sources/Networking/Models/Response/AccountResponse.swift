@@ -8,6 +8,15 @@
 import Foundation
 
 // MARK: - AccountResponse
+
+// If I were to work with this API I'd question whether these models are appropriate, and
+// would see whether we could make changes on the backend to ensure that at least some of
+// the keys in the API response are mandatory.
+//
+// Doing this would allow us to remove all of these optionals, significantly clean up the
+// codebase and throw decoding errors when there are issues, instead of returning a
+// valid `AccountResponse` without any valid properties.
+
 public struct AccountResponse: Codable {
     public let moneyboxEndOfTaxYear: String?
     public let totalPlanValue: Double?

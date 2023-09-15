@@ -49,15 +49,13 @@ final class LoginViewModelTests: XCTestCase {
         let viewModel = LoginViewModel(dataProvider: dataProvider)
         viewModel.delegate = delegate
         
-        StubData.read(file: "LoginSucceed") {
-            self.dataProvider.loginReturnValue = $0
-            
-            viewModel.authenticate(email: "foo@bar.com", password: "bar")
-            
-            XCTAssertEqual(Authentication.token, "GuQfJPpjUyJH10Og+hS9c0ttz4q2ZoOnEQBSBP2eAEs=")
-            XCTAssertEqual(UserProvider.user?.firstName, "Michael")
-            XCTAssertEqual(UserProvider.user?.lastName, "Jordan")
-        }
+        dataProvider.loginReturnValue = StubData.read(file: "LoginSucceed")
+        
+        viewModel.authenticate(email: "foo@bar.com", password: "bar")
+        
+        XCTAssertEqual(Authentication.token, "GuQfJPpjUyJH10Og+hS9c0ttz4q2ZoOnEQBSBP2eAEs=")
+        XCTAssertEqual(UserProvider.user?.firstName, "Michael")
+        XCTAssertEqual(UserProvider.user?.lastName, "Jordan")
     }
     
     func test_authenticate_apiFailure_showsErrorToUser() throws {
@@ -65,9 +63,9 @@ final class LoginViewModelTests: XCTestCase {
         viewModel.delegate = delegate
         
         // We could simulate a failure by forcing this method to fail, or by returning our own error
-        // StubData.read(file: "LoginFailure") { }
+//        dataProvider.loginReturnValue = StubData.read(file: "LoginFailure")
         
-        self.dataProvider.loginReturnValue = .failure(MockError.failure)
+        dataProvider.loginReturnValue = .failure(MockError.failure)
         
         viewModel.authenticate(email: "foo@bar.com", password: "bar")
         

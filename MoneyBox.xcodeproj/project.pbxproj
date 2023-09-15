@@ -24,8 +24,14 @@
 		CBC616CC2AB36FF100420E5B /* DataProviderLogicMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616CB2AB36FF100420E5B /* DataProviderLogicMock.swift */; };
 		CBC616CE2AB37F8F00420E5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616CD2AB37F8F00420E5B /* AppCoordinator.swift */; };
 		CBC616D02AB37FD600420E5B /* LaunchAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */; };
+		CBC616DA2AB43AA100420E5B /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616D92AB43AA100420E5B /* Double+Extension.swift */; };
 		CBC617002AB4CF3300420E5B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616FF2AB4CF3300420E5B /* Coordinator.swift */; };
 		CBC617022AB4CF6100420E5B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC617012AB4CF6100420E5B /* LoginCoordinator.swift */; };
+		CBC617072AB4D6C700420E5B /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC617062AB4D6C700420E5B /* AccountsViewModel.swift */; };
+		CBC617092AB4D6D000420E5B /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC617082AB4D6D000420E5B /* AccountsView.swift */; };
+		CBC6170B2AB4D6EA00420E5B /* AccountSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC6170A2AB4D6EA00420E5B /* AccountSummary.swift */; };
+		CBC6170D2AB4D79B00420E5B /* AccountsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC6170C2AB4D79B00420E5B /* AccountsCoordinator.swift */; };
+		CBC6170F2AB4E10900420E5B /* AccountsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC6170E2AB4E10900420E5B /* AccountsViewModelTests.swift */; };
 		CBD04B1D2AB226F4007B27CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CBD04B1C2AB226F4007B27CD /* README.md */; };
 		CBD04B202AB228C5007B27CD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD04B1F2AB228C5007B27CD /* LoginViewModel.swift */; };
 		CBD04B222AB22C00007B27CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD04B212AB22C00007B27CD /* User.swift */; };
@@ -62,8 +68,14 @@
 		CBC616CB2AB36FF100420E5B /* DataProviderLogicMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderLogicMock.swift; sourceTree = "<group>"; };
 		CBC616CD2AB37F8F00420E5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimationController.swift; sourceTree = "<group>"; };
+		CBC616D92AB43AA100420E5B /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		CBC616FF2AB4CF3300420E5B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CBC617012AB4CF6100420E5B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		CBC617062AB4D6C700420E5B /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		CBC617082AB4D6D000420E5B /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		CBC6170A2AB4D6EA00420E5B /* AccountSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummary.swift; sourceTree = "<group>"; };
+		CBC6170C2AB4D79B00420E5B /* AccountsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCoordinator.swift; sourceTree = "<group>"; };
+		CBC6170E2AB4E10900420E5B /* AccountsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModelTests.swift; sourceTree = "<group>"; };
 		CBD04B1C2AB226F4007B27CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CBD04B1F2AB228C5007B27CD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CBD04B212AB22C00007B27CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -116,9 +128,10 @@
 				B2CA46CB279350880041B3A5 /* AppDelegate.swift */,
 				CBC616FF2AB4CF3300420E5B /* Coordinator.swift */,
 				CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */,
-				CBC616C22AB365B800420E5B /* UIColor+Extension.swift */,
 				CBD04B212AB22C00007B27CD /* User.swift */,
 				B2CA46D42793508A0041B3A5 /* Assets.xcassets */,
+				CBC617052AB4D6AE00420E5B /* Accounts */,
+				CBC616D82AB43A9500420E5B /* Extensions */,
 				B2CA46D62793508A0041B3A5 /* LaunchScreen.storyboard */,
 				CBD04B1E2AB22886007B27CD /* Login */,
 				CBC616BF2AB3653D00420E5B /* UIComponents */,
@@ -129,6 +142,7 @@
 		B2CA46E12793508A0041B3A5 /* MoneyBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				CBC6170E2AB4E10900420E5B /* AccountsViewModelTests.swift */,
 				CBC616C82AB36F2A00420E5B /* LoginViewModelTests.swift */,
 				B2CA47662794D69A0041B3A5 /* StubData.swift */,
 				CBC616CA2AB36FDB00420E5B /* Mocks */,
@@ -140,8 +154,8 @@
 		B2CA47682794D6AC0041B3A5 /* ResponseJsons */ = {
 			isa = PBXGroup;
 			children = (
-				B2CA47692794D6D70041B3A5 /* LoginSucceed.json */,
 				B2CA47B2279604A10041B3A5 /* Accounts.json */,
+				B2CA47692794D6D70041B3A5 /* LoginSucceed.json */,
 			);
 			path = ResponseJsons;
 			sourceTree = "<group>";
@@ -168,6 +182,26 @@
 				CBC616CB2AB36FF100420E5B /* DataProviderLogicMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		CBC616D82AB43A9500420E5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBC616C22AB365B800420E5B /* UIColor+Extension.swift */,
+				CBC616D92AB43AA100420E5B /* Double+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBC617052AB4D6AE00420E5B /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				CBC6170C2AB4D79B00420E5B /* AccountsCoordinator.swift */,
+				CBC6170A2AB4D6EA00420E5B /* AccountSummary.swift */,
+				CBC617082AB4D6D000420E5B /* AccountsView.swift */,
+				CBC617062AB4D6C700420E5B /* AccountsViewModel.swift */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 		CBD04B1E2AB22886007B27CD /* Login */ = {
@@ -294,13 +328,18 @@
 			files = (
 				CBD04B222AB22C00007B27CD /* User.swift in Sources */,
 				CBC616C12AB3654F00420E5B /* RoundedButton.swift in Sources */,
+				CBC617072AB4D6C700420E5B /* AccountsViewModel.swift in Sources */,
+				CBC616DA2AB43AA100420E5B /* Double+Extension.swift in Sources */,
 				B2CA46CC279350880041B3A5 /* AppDelegate.swift in Sources */,
 				CBC616C32AB365B800420E5B /* UIColor+Extension.swift in Sources */,
 				B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */,
 				CBC616D02AB37FD600420E5B /* LaunchAnimationController.swift in Sources */,
 				CBC617022AB4CF6100420E5B /* LoginCoordinator.swift in Sources */,
 				CBC617002AB4CF3300420E5B /* Coordinator.swift in Sources */,
+				CBC6170B2AB4D6EA00420E5B /* AccountSummary.swift in Sources */,
+				CBC6170D2AB4D79B00420E5B /* AccountsCoordinator.swift in Sources */,
 				CBD04B202AB228C5007B27CD /* LoginViewModel.swift in Sources */,
+				CBC617092AB4D6D000420E5B /* AccountsView.swift in Sources */,
 				CBC616CE2AB37F8F00420E5B /* AppCoordinator.swift in Sources */,
 				CBC616C52AB367FC00420E5B /* LoginFieldType.swift in Sources */,
 				CBC616BE2AB3651600420E5B /* LoginTextField.swift in Sources */,
@@ -313,6 +352,7 @@
 			files = (
 				CBC616CC2AB36FF100420E5B /* DataProviderLogicMock.swift in Sources */,
 				CBC616C92AB36F2A00420E5B /* LoginViewModelTests.swift in Sources */,
+				CBC6170F2AB4E10900420E5B /* AccountsViewModelTests.swift in Sources */,
 				B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

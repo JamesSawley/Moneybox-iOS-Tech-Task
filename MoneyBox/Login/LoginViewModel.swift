@@ -53,7 +53,6 @@ class LoginViewModel {
     }
     
     private func authenticated(response: LoginResponse) {
-        print("Authenticated: ", response)
         Authentication.token = response.session.bearerToken
         UserProvider.user = response.user
         coordinator?.finish()

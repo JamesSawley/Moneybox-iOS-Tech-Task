@@ -2,6 +2,8 @@ import UIKit
 
 class LaunchAnimationController: UIViewController {
     
+    // Taking a common sense approach; having a dedicated coordinator for a simple,
+    // small view controller is probably overkill.
     weak var coordinator: AppCoordinator?
     
     private var logoView: UIImageView = {
@@ -40,7 +42,7 @@ class LaunchAnimationController: UIViewController {
             self.finalYAnchor.isActive = true
             self.view.layoutIfNeeded()
         } completion: { _ in
-            self.coordinator?.endLaunch()
+            self.coordinator?.navigateToLogin()
         }
     }
 }

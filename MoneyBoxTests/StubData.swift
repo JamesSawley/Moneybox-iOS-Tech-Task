@@ -9,17 +9,17 @@ import Foundation
 @testable import MoneyBox
 
 struct StubData {
-    static func read<V: Decodable>(file: String, callback: @escaping (Result<V, Error>) -> Void) {
+    static func read<V: Decodable>(file: String) -> Result<V, Error> {
         if let path = Bundle.main.path(forResource: file, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let result = try JSONDecoder().decode(V.self, from: data)
-                callback(.success(result))
+                return .success(result)
             } catch {
-                callback(.failure(NSError.error(with: "stub decoding error")))
+                return .failure(NSError.error(with: "stub decoding error"))
             }
         } else {
-            callback(.failure(NSError.error(with: "no json file")))
+            return .failure(NSError.error(with: "no json file"))
         }
     }
 }

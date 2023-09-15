@@ -1,3 +1,4 @@
+import SwiftUI
 import UIKit
 
 class AppCoordinator: Coordinator {
@@ -27,21 +28,29 @@ class AppCoordinator: Coordinator {
 }
 
 extension AppCoordinator {
-    func endLaunch() {
+    func navigateToLogin() {
         let loginCoordinator = LoginCoordinator(rootViewController: rootViewController, delegate: self)
         addChildCoordinator(loginCoordinator)
         loginCoordinator.start()
     }
     
     func navigateToAccounts() {
-        // TODO
-        rootViewController.viewControllers = [UIViewController()]
+        let accountsCoordinator = AccountsCoordinator(rootViewController: rootViewController, delegate: self)
+        addChildCoordinator(accountsCoordinator)
+        accountsCoordinator.start()
     }
 }
 
 extension AppCoordinator: LoginCoordinatorDelegate {
     func didFinish(from coordinator: LoginCoordinator) {
         navigateToAccounts()
+        removeChildCoordinator(coordinator)
+    }
+}
+
+extension AppCoordinator: AccountsCoordinatorDelegate {
+    func didFinish(from coordinator: AccountsCoordinator) {
+        navigateToLogin()
         removeChildCoordinator(coordinator)
     }
 }
