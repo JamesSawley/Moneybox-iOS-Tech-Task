@@ -64,6 +64,7 @@ extension LoginViewController {
     
     private func configure(_ label: UILabel, type: LoginFieldType) {
         label.text = type.label
+        label.textColor = .typography
     }
     
     private func configure(_ errorLabel: UILabel) {

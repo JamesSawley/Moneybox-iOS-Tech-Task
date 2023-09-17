@@ -10,6 +10,7 @@ extension UIColor {
     static let accent = UIColor(named: "AccentColor")
     static let background = UIColor(named: "Background")
     static let grey = UIColor(named: "GreyColor")
+    static let typography = UIColor(named: "Typography")
 }
 
 extension Color {

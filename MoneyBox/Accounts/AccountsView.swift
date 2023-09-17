@@ -33,6 +33,7 @@ struct AccountsView: View {
                 loadingView()
             }
         }
+        .foregroundColor(.typography)
         .padding()
         .onAppear {
             viewModel.fetchAccounts()
