@@ -2,6 +2,7 @@ import Networking
 import SwiftUI
 
 struct AccountsView: View {
+    
     @ObservedObject var viewModel: AccountsViewModel
     
     @State var showLogoutWarning = false
@@ -76,23 +77,18 @@ struct AccountsView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text(account.name)
                     .font(.title)
-                HStack {
-                    PrimaryValueView(title: "Current value",
-                                     value: account.planValue.currencyString)
-                    Spacer()
-                    PrimaryValueView(title: "Moneybox",
-                                     value: account.moneybox.currencyString,
-                                     alignment: .trailing)
-                }
+                
+                AccountSummaryView(account: account)
             }
+            Spacer()
             Image(systemName: "chevron.right")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 16)
-                .padding(.leading)
         }
-        .modifier(AccountTileModifier())
+        .contentShape(Rectangle())
         .frame(maxWidth: .infinity)
+        .modifier(AccountTileModifier())
         .onTapGesture {
             viewModel.didTap(account: account)
         }

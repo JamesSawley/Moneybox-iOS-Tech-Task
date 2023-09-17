@@ -30,6 +30,7 @@ class LoginTextField: UITextField {
         
         accessibilityIdentifier = type.accessibilityIdentifier
         backgroundColor = .grey
+        font = .preferredFont(forTextStyle: .body)
         isSecureTextEntry = type.isSecureTextEntry
         returnKeyType = type.returnKeyType
         

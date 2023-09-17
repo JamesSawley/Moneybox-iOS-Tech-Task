@@ -63,6 +63,7 @@ extension LoginViewController {
     }
     
     private func configure(_ label: UILabel, type: LoginFieldType) {
+        label.font = .preferredFont(forTextStyle: .body)
         label.text = type.label
         label.textColor = .typography
     }

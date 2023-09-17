@@ -35,7 +35,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngx-PZ-nqz" customClass="LoginTextField" customModule="MoneyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="20.5" width="382" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="S7b-VA-wHe"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="S7b-VA-wHe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -67,7 +67,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq5-8W-Gfx" customClass="RoundedButton" customModule="MoneyBox" customModuleProvider="target">
                                 <rect key="frame" x="16" y="802" width="382" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="xc9-XJ-6MU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="xc9-XJ-6MU"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>

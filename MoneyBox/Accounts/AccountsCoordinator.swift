@@ -43,8 +43,15 @@ extension AccountsCoordinator {
         let hostingController = UIHostingController(rootView: view)
         hostingController.setBackground()
         if #available(iOS 15.0, *) {
+            // TODO: Create method to improve reusability
+            let detents: [UISheetPresentationController.Detent]
+            if largeUIKitSizeCategories.contains(UIApplication.shared.preferredContentSizeCategory) {
+                detents = [.large()]
+            } else {
+                detents = [.medium()]
+            }
             if let sheet = hostingController.sheetPresentationController {
-                sheet.detents = [.medium()]
+                sheet.detents = detents
             }
         }
         rootViewController.presentedViewController?.present(hostingController, animated: true)

@@ -16,6 +16,9 @@
 		B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA47662794D69A0041B3A5 /* StubData.swift */; };
 		B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47692794D6D70041B3A5 /* LoginSucceed.json */; };
 		B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47B2279604A10041B3A5 /* Accounts.json */; };
+		CB6BC8872AB7182D00C8C7D9 /* DynamicFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BC8862AB7182D00C8C7D9 /* DynamicFonts.swift */; };
+		CB6BC8892AB71B2400C8C7D9 /* AccountSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BC8882AB71B2400C8C7D9 /* AccountSummaryView.swift */; };
+		CB6BC88B2AB71C7E00C8C7D9 /* AccountFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BC88A2AB71C7E00C8C7D9 /* AccountFooterView.swift */; };
 		CB9E08C42AB6F902006F5611 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C32AB6F902006F5611 /* CGFloat+Extension.swift */; };
 		CB9E08C62AB6F97C006F5611 /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C52AB6F97C006F5611 /* DoubleExtensionTests.swift */; };
 		CB9E08C82AB6FA3F006F5611 /* AccountSummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C72AB6FA3F006F5611 /* AccountSummaryTests.swift */; };
@@ -83,6 +86,9 @@
 		B2CA47662794D69A0041B3A5 /* StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubData.swift; sourceTree = "<group>"; };
 		B2CA47692794D6D70041B3A5 /* LoginSucceed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginSucceed.json; sourceTree = "<group>"; };
 		B2CA47B2279604A10041B3A5 /* Accounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Accounts.json; sourceTree = "<group>"; };
+		CB6BC8862AB7182D00C8C7D9 /* DynamicFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFonts.swift; sourceTree = "<group>"; };
+		CB6BC8882AB71B2400C8C7D9 /* AccountSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryView.swift; sourceTree = "<group>"; };
+		CB6BC88A2AB71C7E00C8C7D9 /* AccountFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFooterView.swift; sourceTree = "<group>"; };
 		CB9E08C32AB6F902006F5611 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		CB9E08C52AB6F97C006F5611 /* DoubleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionTests.swift; sourceTree = "<group>"; };
 		CB9E08C72AB6FA3F006F5611 /* AccountSummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryTests.swift; sourceTree = "<group>"; };
@@ -176,6 +182,7 @@
 				CBC616CD2AB37F8F00420E5B /* AppCoordinator.swift */,
 				B2CA46CB279350880041B3A5 /* AppDelegate.swift */,
 				CBC616FF2AB4CF3300420E5B /* Coordinator.swift */,
+				CB6BC8862AB7182D00C8C7D9 /* DynamicFonts.swift */,
 				CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */,
 				CBC6171D2AB4F28F00420E5B /* SessionManager.swift */,
 				CBD04B212AB22C00007B27CD /* User.swift */,
@@ -266,8 +273,10 @@
 		CBC617052AB4D6AE00420E5B /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
+				CB6BC88A2AB71C7E00C8C7D9 /* AccountFooterView.swift */,
 				CBC6170C2AB4D79B00420E5B /* AccountsCoordinator.swift */,
 				CBC6170A2AB4D6EA00420E5B /* AccountSummary.swift */,
+				CB6BC8882AB71B2400C8C7D9 /* AccountSummaryView.swift */,
 				CBC617082AB4D6D000420E5B /* AccountsView.swift */,
 				CBC617062AB4D6C700420E5B /* AccountsViewModel.swift */,
 				CBC617122AB4E6E500420E5B /* AccountDetails */,
@@ -439,6 +448,7 @@
 				CB9E08CA2AB6FCDC006F5611 /* PrimaryValueView.swift in Sources */,
 				CBD04B222AB22C00007B27CD /* User.swift in Sources */,
 				CBC616C12AB3654F00420E5B /* RoundedButton.swift in Sources */,
+				CB6BC8892AB71B2400C8C7D9 /* AccountSummaryView.swift in Sources */,
 				CB9E08D02AB70556006F5611 /* LargeFontModifier.swift in Sources */,
 				CBC617072AB4D6C700420E5B /* AccountsViewModel.swift in Sources */,
 				CBC616DA2AB43AA100420E5B /* Double+Extension.swift in Sources */,
@@ -448,7 +458,9 @@
 				CBC617182AB4E7BE00420E5B /* AccountDetailsViewModel.swift in Sources */,
 				B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */,
 				CB9E08D22AB708BC006F5611 /* UserDefaultsType.swift in Sources */,
+				CB6BC8872AB7182D00C8C7D9 /* DynamicFonts.swift in Sources */,
 				CBF5D9FB2AB6D91100563F46 /* UIViewController+Extension.swift in Sources */,
+				CB6BC88B2AB71C7E00C8C7D9 /* AccountFooterView.swift in Sources */,
 				CBC616D02AB37FD600420E5B /* LaunchAnimationController.swift in Sources */,
 				CBC617022AB4CF6100420E5B /* LoginCoordinator.swift in Sources */,
 				CBC617002AB4CF3300420E5B /* Coordinator.swift in Sources */,
