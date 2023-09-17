@@ -8,6 +8,7 @@ final class LoginViewModelTests: XCTestCase {
     private var dataProvider: DataProviderLogicMock!
     private var delegate: LoginViewModelDelegateMock!
     private var sessionManager: SessionManagerMock!
+    private var userDefaults: UserDefaultsMock!
     
     private var viewModel: LoginViewModel!
 
@@ -16,11 +17,14 @@ final class LoginViewModelTests: XCTestCase {
         dataProvider = DataProviderLogicMock()
         delegate = LoginViewModelDelegateMock()
         sessionManager = SessionManagerMock()
+        userDefaults = UserDefaultsMock()
         
-        viewModel = LoginViewModel(dataProvider: dataProvider, sessionManager: sessionManager)
+        viewModel = LoginViewModel(dataProvider: dataProvider,
+                                   sessionManager: sessionManager,
+                                   userDefaults: userDefaults)
         viewModel.delegate = delegate
         
-        // TODO: Mock these properly with a protocol
+        // TODO: Mock this properly with a protocol
         UserProvider.user = nil
     }
 
@@ -40,6 +44,14 @@ final class LoginViewModelTests: XCTestCase {
         viewModel.authenticate(email: "foo", password: "bar")
         
         XCTAssertEqual(delegate.errorMessage, "Your email address is invalid. Please try again.")
+    }
+    
+    func test_authenticate_savesUser() throws {
+        dataProvider.loginReturnValue = StubData.read(file: "LoginSucceed")
+        
+        viewModel.authenticate(email: "foo@bar.com", password: "bar")
+        
+        XCTAssertEqual(viewModel.savedEmail, "foo@bar.com")
     }
     
     func test_authenticate_apiSuccess_persistsTokenAndUser() throws {

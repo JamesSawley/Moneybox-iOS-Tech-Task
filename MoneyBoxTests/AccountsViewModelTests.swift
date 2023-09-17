@@ -50,6 +50,6 @@ final class AccountsViewModelTests: XCTestCase {
         
         XCTAssertTrue(viewModel.errorMessage.isEmpty)
         XCTAssertNotNil(viewModel.accounts)
-        XCTAssertEqual(viewModel.planValue, "Plan Value: £15707.08")
+        XCTAssertEqual(viewModel.planValue, "£15,707.08")
     }
 }

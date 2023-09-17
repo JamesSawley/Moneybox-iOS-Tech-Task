@@ -23,6 +23,8 @@
 		CB9E08CC2AB7036E006F5611 /* AccountTileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08CB2AB7036E006F5611 /* AccountTileModifier.swift */; };
 		CB9E08CE2AB7049D006F5611 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08CD2AB7049D006F5611 /* Spinner.swift */; };
 		CB9E08D02AB70556006F5611 /* LargeFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08CF2AB70556006F5611 /* LargeFontModifier.swift */; };
+		CB9E08D22AB708BC006F5611 /* UserDefaultsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08D12AB708BC006F5611 /* UserDefaultsType.swift */; };
+		CB9E08D42AB70918006F5611 /* UserDefaultsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08D32AB70918006F5611 /* UserDefaultsMock.swift */; };
 		CBC616BE2AB3651600420E5B /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616BD2AB3651600420E5B /* LoginTextField.swift */; };
 		CBC616C12AB3654F00420E5B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C02AB3654F00420E5B /* RoundedButton.swift */; };
 		CBC616C32AB365B800420E5B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C22AB365B800420E5B /* UIColor+Extension.swift */; };
@@ -80,6 +82,8 @@
 		CB9E08CB2AB7036E006F5611 /* AccountTileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTileModifier.swift; sourceTree = "<group>"; };
 		CB9E08CD2AB7049D006F5611 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		CB9E08CF2AB70556006F5611 /* LargeFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeFontModifier.swift; sourceTree = "<group>"; };
+		CB9E08D12AB708BC006F5611 /* UserDefaultsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsType.swift; sourceTree = "<group>"; };
+		CB9E08D32AB70918006F5611 /* UserDefaultsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMock.swift; sourceTree = "<group>"; };
 		CBC616BD2AB3651600420E5B /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		CBC616C02AB3654F00420E5B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CBC616C22AB365B800420E5B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				CBC616CF2AB37FD600420E5B /* LaunchAnimationController.swift */,
 				CBC6171D2AB4F28F00420E5B /* SessionManager.swift */,
 				CBD04B212AB22C00007B27CD /* User.swift */,
+				CB9E08D12AB708BC006F5611 /* UserDefaultsType.swift */,
 				B2CA46D42793508A0041B3A5 /* Assets.xcassets */,
 				CBC617052AB4D6AE00420E5B /* Accounts */,
 				CBC616D82AB43A9500420E5B /* Extensions */,
@@ -215,6 +220,7 @@
 			children = (
 				CBC616CB2AB36FF100420E5B /* DataProviderLogicMock.swift */,
 				CBC6171F2AB4F7C700420E5B /* SessionManagerMock.swift */,
+				CB9E08D32AB70918006F5611 /* UserDefaultsMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				CB9E08C42AB6F902006F5611 /* CGFloat+Extension.swift in Sources */,
 				CBC617182AB4E7BE00420E5B /* AccountDetailsViewModel.swift in Sources */,
 				B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */,
+				CB9E08D22AB708BC006F5611 /* UserDefaultsType.swift in Sources */,
 				CBF5D9FB2AB6D91100563F46 /* UIViewController+Extension.swift in Sources */,
 				CBC616D02AB37FD600420E5B /* LaunchAnimationController.swift in Sources */,
 				CBC617022AB4CF6100420E5B /* LoginCoordinator.swift in Sources */,
@@ -409,6 +416,7 @@
 				CBC616CC2AB36FF100420E5B /* DataProviderLogicMock.swift in Sources */,
 				CBC616C92AB36F2A00420E5B /* LoginViewModelTests.swift in Sources */,
 				CB9E08C82AB6FA3F006F5611 /* AccountSummaryTests.swift in Sources */,
+				CB9E08D42AB70918006F5611 /* UserDefaultsMock.swift in Sources */,
 				CBC6170F2AB4E10900420E5B /* AccountsViewModelTests.swift in Sources */,
 				CB9E08C62AB6F97C006F5611 /* DoubleExtensionTests.swift in Sources */,
 				B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */,

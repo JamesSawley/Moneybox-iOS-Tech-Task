@@ -50,6 +50,8 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
         
     private func configureViews() {
+        emailTextField.text = viewModel.savedEmail
+
         configure(emailLabel, type: .email)
         configure(emailTextField, type: .email)
         configure(passwordLabel, type: .password)

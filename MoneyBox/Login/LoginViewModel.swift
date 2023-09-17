@@ -5,6 +5,10 @@ protocol LoginViewModelDelegate: AnyObject {
     func showError(message: String)
 }
 
+extension String {
+    static let savedEmailKey: String = "LoginViewModel.SavedEmail"
+}
+
 class LoginViewModel {
     
     weak var delegate: LoginViewModelDelegate?
@@ -12,14 +16,24 @@ class LoginViewModel {
     
     private let dataProvider: DataProviderLogic
     private let sessionManager: SessionManager
+    private let userDefaults: UserDefaultsType
     
-    convenience init() {
-        self.init(dataProvider: DataProvider(), sessionManager: ConcreteSessionManager.shared)
+    var savedEmail: String? {
+        userDefaults.string(forKey: .savedEmailKey)
     }
     
-    init(dataProvider: DataProviderLogic, sessionManager: SessionManager) {
+    convenience init() {
+        self.init(dataProvider: DataProvider(),
+                  sessionManager: ConcreteSessionManager.shared,
+                  userDefaults: UserDefaults.standard)
+    }
+    
+    init(dataProvider: DataProviderLogic,
+         sessionManager: SessionManager,
+         userDefaults: UserDefaultsType) {
         self.dataProvider = dataProvider
         self.sessionManager = sessionManager
+        self.userDefaults = userDefaults
     }
     
     func authenticate(email: String?, password: String?) {
@@ -31,6 +45,8 @@ class LoginViewModel {
         }
 
         guard let email, let password else { return }
+        save(email: email)
+        
         let request = LoginRequest(email: email, password: password)
         dataProvider.login(request: request) { result in
             switch result {
@@ -58,6 +74,10 @@ class LoginViewModel {
         sessionManager.setUserToken(response.session.bearerToken)
         UserProvider.user = response.user
         coordinator?.finish()
+    }
+    
+    private func save(email: String) {
+        userDefaults.set(email, forKey: .savedEmailKey)
     }
 }
 
