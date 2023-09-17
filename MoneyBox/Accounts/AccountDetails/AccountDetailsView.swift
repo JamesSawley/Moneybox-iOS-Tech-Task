@@ -13,11 +13,12 @@ struct AccountDetailsView: View {
                 
                 VStack {
                     HStack(alignment: .top) {
-                        titleWithValue(title: "Current value",
-                                       value: account.planValue.currencyString)
+                        PrimaryValueView(title: "Current value",
+                                         value: account.planValue.currencyString)
                         Spacer()
-                        titleWithValue(title: "Moneybox",
-                                       value: account.moneybox.currencyString)
+                        PrimaryValueView(title: "Moneybox",
+                                         value: account.moneybox.currencyString,
+                                         alignment: .trailing)
                     }
                     if account.hasProductInformation {
                         Divider()
@@ -33,11 +34,7 @@ struct AccountDetailsView: View {
                         }
                     }
                 }
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: .cornerRadius)
-                        .strokeBorder()
-                )
+                .modifier(AccountTileModifier())
             }
             .foregroundColor(.typography)
             Spacer()
@@ -53,17 +50,6 @@ struct AccountDetailsView: View {
             }
         }
         .padding()
-    }
-    
-    @ViewBuilder
-    func titleWithValue(title: String, value: String) -> some View {
-        VStack(alignment: .leading) {
-            Text(title)
-                .font(.footnote)
-            
-            Text(value)
-                .font(.title)
-        }
     }
     
     @ViewBuilder

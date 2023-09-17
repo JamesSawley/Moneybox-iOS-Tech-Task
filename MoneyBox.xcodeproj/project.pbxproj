@@ -19,6 +19,10 @@
 		CB9E08C42AB6F902006F5611 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C32AB6F902006F5611 /* CGFloat+Extension.swift */; };
 		CB9E08C62AB6F97C006F5611 /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C52AB6F97C006F5611 /* DoubleExtensionTests.swift */; };
 		CB9E08C82AB6FA3F006F5611 /* AccountSummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C72AB6FA3F006F5611 /* AccountSummaryTests.swift */; };
+		CB9E08CA2AB6FCDC006F5611 /* PrimaryValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C92AB6FCDC006F5611 /* PrimaryValueView.swift */; };
+		CB9E08CC2AB7036E006F5611 /* AccountTileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08CB2AB7036E006F5611 /* AccountTileModifier.swift */; };
+		CB9E08CE2AB7049D006F5611 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08CD2AB7049D006F5611 /* Spinner.swift */; };
+		CB9E08D02AB70556006F5611 /* LargeFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08CF2AB70556006F5611 /* LargeFontModifier.swift */; };
 		CBC616BE2AB3651600420E5B /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616BD2AB3651600420E5B /* LoginTextField.swift */; };
 		CBC616C12AB3654F00420E5B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C02AB3654F00420E5B /* RoundedButton.swift */; };
 		CBC616C32AB365B800420E5B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C22AB365B800420E5B /* UIColor+Extension.swift */; };
@@ -72,6 +76,10 @@
 		CB9E08C32AB6F902006F5611 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		CB9E08C52AB6F97C006F5611 /* DoubleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionTests.swift; sourceTree = "<group>"; };
 		CB9E08C72AB6FA3F006F5611 /* AccountSummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryTests.swift; sourceTree = "<group>"; };
+		CB9E08C92AB6FCDC006F5611 /* PrimaryValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryValueView.swift; sourceTree = "<group>"; };
+		CB9E08CB2AB7036E006F5611 /* AccountTileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTileModifier.swift; sourceTree = "<group>"; };
+		CB9E08CD2AB7049D006F5611 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		CB9E08CF2AB70556006F5611 /* LargeFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeFontModifier.swift; sourceTree = "<group>"; };
 		CBC616BD2AB3651600420E5B /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		CBC616C02AB3654F00420E5B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CBC616C22AB365B800420E5B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -193,7 +201,11 @@
 		CBC616BF2AB3653D00420E5B /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				CB9E08CB2AB7036E006F5611 /* AccountTileModifier.swift */,
+				CB9E08CF2AB70556006F5611 /* LargeFontModifier.swift */,
+				CB9E08C92AB6FCDC006F5611 /* PrimaryValueView.swift */,
 				CBC616C02AB3654F00420E5B /* RoundedButton.swift */,
+				CB9E08CD2AB7049D006F5611 /* Spinner.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -361,8 +373,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9E08CA2AB6FCDC006F5611 /* PrimaryValueView.swift in Sources */,
 				CBD04B222AB22C00007B27CD /* User.swift in Sources */,
 				CBC616C12AB3654F00420E5B /* RoundedButton.swift in Sources */,
+				CB9E08D02AB70556006F5611 /* LargeFontModifier.swift in Sources */,
 				CBC617072AB4D6C700420E5B /* AccountsViewModel.swift in Sources */,
 				CBC616DA2AB43AA100420E5B /* Double+Extension.swift in Sources */,
 				B2CA46CC279350880041B3A5 /* AppDelegate.swift in Sources */,
@@ -374,10 +388,12 @@
 				CBC616D02AB37FD600420E5B /* LaunchAnimationController.swift in Sources */,
 				CBC617022AB4CF6100420E5B /* LoginCoordinator.swift in Sources */,
 				CBC617002AB4CF3300420E5B /* Coordinator.swift in Sources */,
+				CB9E08CC2AB7036E006F5611 /* AccountTileModifier.swift in Sources */,
 				CBC6170B2AB4D6EA00420E5B /* AccountSummary.swift in Sources */,
 				CBC617162AB4E70500420E5B /* AccountDetailsView.swift in Sources */,
 				CBC6170D2AB4D79B00420E5B /* AccountsCoordinator.swift in Sources */,
 				CBD04B202AB228C5007B27CD /* LoginViewModel.swift in Sources */,
+				CB9E08CE2AB7049D006F5611 /* Spinner.swift in Sources */,
 				CBC617092AB4D6D000420E5B /* AccountsView.swift in Sources */,
 				CBC616CE2AB37F8F00420E5B /* AppCoordinator.swift in Sources */,
 				CBC616C52AB367FC00420E5B /* LoginFieldType.swift in Sources */,

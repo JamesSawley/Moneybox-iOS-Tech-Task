@@ -4,12 +4,27 @@ import SwiftUI
 struct AccountsView: View {
     @ObservedObject var viewModel: AccountsViewModel
     
+    @State var showLogoutWarning = false
+    
     var body: some View {
         VStack {
-            Button {
-                viewModel.finish()
-            } label: {
-                Image(systemName: "rectangle.portrait.and.arrow.right")
+            HStack {
+                Text(viewModel.helloMessage)
+                    .modifier(LargeFontModifier())
+                Spacer()
+                Button {
+                    showLogoutWarning = true
+                } label: {
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                }
+                .alert(isPresented: $showLogoutWarning) {
+                    Alert(title: Text("Log out"),
+                          message: Text("Are you sure you want to log out?"),
+                          primaryButton: .cancel(Text("Cancel"), action: {}),
+                          secondaryButton: .destructive(Text("Log out"), action: viewModel.finish))
+                }
             }
             
             if let accounts = viewModel.accounts {
@@ -18,6 +33,7 @@ struct AccountsView: View {
                 loadingView()
             }
         }
+        .padding()
         .onAppear {
             viewModel.fetchAccounts()
         }
@@ -26,10 +42,13 @@ struct AccountsView: View {
     @ViewBuilder
     private func accountsView(_ accounts: AccountResponse) -> some View {
         VStack(alignment: .leading) {
-            Text(viewModel.helloMessage)
             if let planValue = viewModel.planValue {
-                Text(planValue)
+                PrimaryValueView(title: "Plan Value",
+                                 titleFont: .body,
+                                 value: planValue,
+                                 valueFont: .system(size: 48))
             }
+            
             ScrollView(.vertical) {
                 VStack(alignment: .leading) {
                     ForEach(accounts.accountDetails) {
@@ -38,16 +57,15 @@ struct AccountsView: View {
                 }
             }
         }
-        .padding()
+        .padding(.top)
     }
     
     @ViewBuilder
     private func loadingView() -> some View {
-        if #available(iOS 14.0, *) {
-            ProgressView()
-        } else {
-            Text("Fetching your accounts")
-            // TODO: Wrap UIKit spinner for SwiftUI iOS 13
+        VStack {
+            Spacer()
+            Spinner()
+            Spacer()
         }
     }
     
@@ -57,18 +75,23 @@ struct AccountsView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text(account.name)
                     .font(.title)
-                Text(account.planValue.currencyString)
-                Text(account.moneybox.currencyString)
+                HStack {
+                    PrimaryValueView(title: "Current value",
+                                     value: account.planValue.currencyString)
+                    Spacer()
+                    PrimaryValueView(title: "Moneybox",
+                                     value: account.moneybox.currencyString,
+                                     alignment: .trailing)
+                }
             }
-            Spacer()
             Image(systemName: "chevron.right")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 16)
+                .padding(.leading)
         }
+        .modifier(AccountTileModifier())
         .frame(maxWidth: .infinity)
-        .background(Color.grey)
-        .cornerRadius(8)
         .onTapGesture {
             viewModel.didTap(account: account)
         }

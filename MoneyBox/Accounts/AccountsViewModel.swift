@@ -14,10 +14,7 @@ class AccountsViewModel: ObservableObject {
     }
     
     var planValue: String? {
-        guard let value = accounts?.totalPlanValue else {
-            return nil
-        }
-        return "Plan Value: \(value.currencyString)"
+        accounts?.totalPlanValue?.currencyString
     }
 
     weak var coordinator: AccountsCoordinator?
