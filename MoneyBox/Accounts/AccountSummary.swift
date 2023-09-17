@@ -29,7 +29,7 @@ extension AccountResponse {
 extension ProductResponse {
     // Let's keep the UI cleaner by filtering out any accounts without the correct information
     var accountDetail: AccountSummary? {
-        guard let id = product?.id,
+        guard let id = id,
               let name = product?.friendlyName else {
             return nil
         }
