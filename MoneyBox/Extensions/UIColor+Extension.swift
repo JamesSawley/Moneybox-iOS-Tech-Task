@@ -13,7 +13,7 @@ extension UIColor {
 }
 
 extension Color {
-    static let accent = Color("AccentColor")
     static let background = Color("Background")
     static let grey = Color("GreyColor")
+    static let typography = Color("Typography")
 }

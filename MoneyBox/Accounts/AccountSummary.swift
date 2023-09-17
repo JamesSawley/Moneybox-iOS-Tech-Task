@@ -6,17 +6,23 @@ struct AccountSummary: Identifiable {
     let name: String
     let planValue: Double
     var moneybox: Double
+
+    // Product information
+    let interestRate: String?
+    let annualLimit: Int?
     
-    var planValueString: String {
-        "Plan Value: \(planValue.currencyString)"
-    }
-    
-    var moneyboxString: String {
-        "Moneybox: \(moneybox.currencyString)"
+    var hasProductInformation: Bool {
+        interestRate != nil
+            || annualLimit != nil
     }
     
     static var preview: Self {
-        .init(id: 0, name: "Stocks and Shares ISA", planValue: 1000.00, moneybox: 50.00)
+        .init(id: 0,
+              name: "Stocks and Shares ISA",
+              planValue: 1000.00,
+              moneybox: 50.00,
+              interestRate: "0.35% AER",
+              annualLimit: 4000)
     }
 }
 
@@ -36,6 +42,8 @@ extension ProductResponse {
         return AccountSummary(id: id,
                               name: name,
                               planValue: planValue ?? 0,
-                              moneybox: moneybox ?? 0)
+                              moneybox: moneybox ?? 0,
+                              interestRate: product?.interestRate,
+                              annualLimit: product?.annualLimit)
     }
 }

@@ -16,6 +16,9 @@
 		B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA47662794D69A0041B3A5 /* StubData.swift */; };
 		B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47692794D6D70041B3A5 /* LoginSucceed.json */; };
 		B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47B2279604A10041B3A5 /* Accounts.json */; };
+		CB9E08C42AB6F902006F5611 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C32AB6F902006F5611 /* CGFloat+Extension.swift */; };
+		CB9E08C62AB6F97C006F5611 /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C52AB6F97C006F5611 /* DoubleExtensionTests.swift */; };
+		CB9E08C82AB6FA3F006F5611 /* AccountSummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08C72AB6FA3F006F5611 /* AccountSummaryTests.swift */; };
 		CBC616BE2AB3651600420E5B /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616BD2AB3651600420E5B /* LoginTextField.swift */; };
 		CBC616C12AB3654F00420E5B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C02AB3654F00420E5B /* RoundedButton.swift */; };
 		CBC616C32AB365B800420E5B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C22AB365B800420E5B /* UIColor+Extension.swift */; };
@@ -66,6 +69,9 @@
 		B2CA47662794D69A0041B3A5 /* StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubData.swift; sourceTree = "<group>"; };
 		B2CA47692794D6D70041B3A5 /* LoginSucceed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginSucceed.json; sourceTree = "<group>"; };
 		B2CA47B2279604A10041B3A5 /* Accounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Accounts.json; sourceTree = "<group>"; };
+		CB9E08C32AB6F902006F5611 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		CB9E08C52AB6F97C006F5611 /* DoubleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionTests.swift; sourceTree = "<group>"; };
+		CB9E08C72AB6FA3F006F5611 /* AccountSummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryTests.swift; sourceTree = "<group>"; };
 		CBC616BD2AB3651600420E5B /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		CBC616C02AB3654F00420E5B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CBC616C22AB365B800420E5B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -155,7 +161,9 @@
 		B2CA46E12793508A0041B3A5 /* MoneyBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB9E08C72AB6FA3F006F5611 /* AccountSummaryTests.swift */,
 				CBC6170E2AB4E10900420E5B /* AccountsViewModelTests.swift */,
+				CB9E08C52AB6F97C006F5611 /* DoubleExtensionTests.swift */,
 				CBC616C82AB36F2A00420E5B /* LoginViewModelTests.swift */,
 				CBC617212AB4F8F800420E5B /* SessionManagerTests.swift */,
 				B2CA47662794D69A0041B3A5 /* StubData.swift */,
@@ -205,6 +213,7 @@
 				CBC616C22AB365B800420E5B /* UIColor+Extension.swift */,
 				CBC616D92AB43AA100420E5B /* Double+Extension.swift */,
 				CBF5D9FA2AB6D91100563F46 /* UIViewController+Extension.swift */,
+				CB9E08C32AB6F902006F5611 /* CGFloat+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 				CBC616DA2AB43AA100420E5B /* Double+Extension.swift in Sources */,
 				B2CA46CC279350880041B3A5 /* AppDelegate.swift in Sources */,
 				CBC616C32AB365B800420E5B /* UIColor+Extension.swift in Sources */,
+				CB9E08C42AB6F902006F5611 /* CGFloat+Extension.swift in Sources */,
 				CBC617182AB4E7BE00420E5B /* AccountDetailsViewModel.swift in Sources */,
 				B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */,
 				CBF5D9FB2AB6D91100563F46 /* UIViewController+Extension.swift in Sources */,
@@ -382,7 +392,9 @@
 			files = (
 				CBC616CC2AB36FF100420E5B /* DataProviderLogicMock.swift in Sources */,
 				CBC616C92AB36F2A00420E5B /* LoginViewModelTests.swift in Sources */,
+				CB9E08C82AB6FA3F006F5611 /* AccountSummaryTests.swift in Sources */,
 				CBC6170F2AB4E10900420E5B /* AccountsViewModelTests.swift in Sources */,
+				CB9E08C62AB6F97C006F5611 /* DoubleExtensionTests.swift in Sources */,
 				B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */,
 				CBC617222AB4F8F800420E5B /* SessionManagerTests.swift in Sources */,
 				CBC617202AB4F7C700420E5B /* SessionManagerMock.swift in Sources */,

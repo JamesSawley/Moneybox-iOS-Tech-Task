@@ -57,8 +57,8 @@ struct AccountsView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text(account.name)
                     .font(.title)
-                Text(account.planValueString)
-                Text(account.moneyboxString)
+                Text(account.planValue.currencyString)
+                Text(account.moneybox.currencyString)
             }
             Spacer()
             Image(systemName: "chevron.right")

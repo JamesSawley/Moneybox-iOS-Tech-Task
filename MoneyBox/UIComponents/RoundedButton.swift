@@ -1,3 +1,4 @@
+import SwiftUI
 import UIKit
 
 // This could be subclassed to provide different styles
@@ -9,7 +10,7 @@ class RoundedButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        layer.cornerRadius = 8
+        layer.cornerRadius = .cornerRadius
         backgroundColor = .accent
         tintColor = .white
     }
