@@ -5,27 +5,21 @@ struct AccountsView: View {
     @ObservedObject var viewModel: AccountsViewModel
     
     var body: some View {
-        ZStack {
-            Color.grey // TODO: Change colour
-                .edgesIgnoringSafeArea(.all)
+        VStack {
+            Button {
+                viewModel.finish()
+            } label: {
+                Image(systemName: "rectangle.portrait.and.arrow.right")
+            }
             
-            VStack {
-                Button {
-                    viewModel.finish()
-                } label: {
-                    Image(systemName: "rectangle.portrait.and.arrow.right")
-                }
-                
-                if let accounts = viewModel.accounts {
-                    accountsView(accounts)
-                } else {
-                    loadingView()
-                }
+            if let accounts = viewModel.accounts {
+                accountsView(accounts)
+            } else {
+                loadingView()
             }
-            .background(Color.grey)
-            .onAppear {
-                viewModel.fetchAccounts()
-            }
+        }
+        .onAppear {
+            viewModel.fetchAccounts()
         }
     }
     

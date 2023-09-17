@@ -21,10 +21,13 @@ class AccountsCoordinator: Coordinator {
         viewModel.coordinator = self
         let view = AccountsView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: view)
-        rootViewController.viewControllers = [hostingController]
+        hostingController.modalPresentationStyle = .fullScreen
+        hostingController.setBackground()
+        rootViewController.present(hostingController, animated: true)
     }
     
     override func finish() {
+        rootViewController.presentedViewController?.dismiss(animated: true)
         delegate?.didFinish(from: self)
     }
 }
@@ -34,7 +37,8 @@ extension AccountsCoordinator {
         let viewModel = AccountDetailsViewModel(accountSummary: account)
         let view = AccountDetailsView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: view)
-        rootViewController.present(hostingController, animated: true)
+        hostingController.setBackground()
+        rootViewController.presentedViewController?.present(hostingController, animated: true)
     }
     
     func prefetchData() {

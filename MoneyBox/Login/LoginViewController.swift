@@ -32,6 +32,8 @@ class LoginViewController: UIViewController {
     }
     
     #if DEBUG
+    // In the main app this could be more elegant, with a screen that allows you to choose an environment/user
+    // to pre-populate the login.
     private func addDebugGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(debugAuthenticate))
         tapGesture.numberOfTapsRequired = 3
