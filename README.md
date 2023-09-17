@@ -1,6 +1,40 @@
 
 # Moneybox iOS Technical Challenge
 
+The project was compiled on Xcode 14.3.1 with Swift 5.8.1.
+
+Since Moneybox supports iOS 13+ I thought it would be fun to create a hybrid UIKit/SwiftUI project. I have experience writing UIKit layouts in code and using storyboard so I have demonstrated both:
+
+* LaunchAnimationController; UIKit with code
+* LoginViewController; UIKit with storyboard
+* Accounts/AccountDetails; SwiftUI
+
+## Architecture
+
+The app is written using MVVM+C design pattern. Instead of using SwiftUI for navigation within the accounts screens, the [`AccountsCoordinator`](./MoneyBox/Accounts/AccountsCoordinator.swift) is responsible for presenting the SwiftUI views.
+
+## Optional features
+Here are some features that weren't included in the brief:
+* The app supports dynamic fonts throughout, including a dynamic layout on the accounts screen depending on the user's preferred font selection.
+* At launch, the Moneybox logo animates from it's position on the launch screen to it's final position on the accounts screen. 
+* The user can log out of their account from the Accounts screen.
+* The product interest rate and annual limit (if applicable) are visible from the account details screen.
+* The user is logged out after 5 minutes when their token is invalidated.
+* In addition to the required unit tests, a simple UI test covers the app launch and login journey.
+
+## Additional features
+If I were to dedicate more time to this project, I would:
+* Re-write the networking layer to be model agnostic, with a layer of business services in the app handling the communications between the app and the networking module. 
+* Use Swift concurrency async/await instead of completion handlers throughout.
+* Introduce a base localizable strings file that includes all of the copy.
+* Use [SwiftGen](https://github.com/SwiftGen/SwiftGen) for generating type safe strings and images.
+* Show error messages to the user when the Account API throws errors.
+* Thoroughly test the app using Voiceover, and fix any accessibility bugs.
+* Add [Fastlane](https://fastlane.tools) to build/test/deploy.
+* Integrate with a CI provider (preferably [Bitrise](https://bitrise.io)) to automate test/deploy of builds.
+
+---
+
 ## The Brief
 
 To create a 'light' version of the Moneybox app that will allow existing users to login and check their account balance, as well as viewing their Moneybox savings. 
