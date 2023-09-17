@@ -27,10 +27,11 @@ class LoginTextField: UITextField {
     
     func configure(with type: LoginFieldType) {
         tag = type.rawValue
-        returnKeyType = type.returnKeyType
-        isSecureTextEntry = type.isSecureTextEntry
         
+        accessibilityIdentifier = type.accessibilityIdentifier
         backgroundColor = .grey
+        isSecureTextEntry = type.isSecureTextEntry
+        returnKeyType = type.returnKeyType
         
         layer.borderWidth = 2
         layer.cornerRadius = .cornerRadius

@@ -19,6 +19,7 @@ struct AccountDetailsView: View {
                         PrimaryValueView(title: "Moneybox",
                                          value: account.moneybox.currencyString,
                                          alignment: .trailing)
+                            .accessibility(identifier: "moneybox")
                     }
                     if account.hasProductInformation {
                         Divider()
@@ -48,6 +49,7 @@ struct AccountDetailsView: View {
                     .background(Color.accentColor)
                     .cornerRadius(.cornerRadius)
             }
+            .accessibility(identifier: "addMoney")
         }
         .padding()
     }

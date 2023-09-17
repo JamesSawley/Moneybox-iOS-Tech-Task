@@ -4,6 +4,15 @@ enum LoginFieldType: Int {
     case email
     case password
     
+    var accessibilityIdentifier: String {
+        switch self {
+        case .email:
+            return "emailField"
+        case .password:
+            return "passwordField"
+        }
+    }
+    
     // TODO: Localizations
     var label: String {
         switch self {

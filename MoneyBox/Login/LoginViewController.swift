@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.accessibilityIdentifier = "Login"
+
         viewModel.delegate = self
         configureViews()
         
@@ -79,6 +81,7 @@ extension LoginViewController {
     private func configure(_ button: UIButton) {
         // TODO: Localization
         button.setTitle("Login", for: .normal)
+        button.accessibilityIdentifier = "loginButton"
     }
 }
 

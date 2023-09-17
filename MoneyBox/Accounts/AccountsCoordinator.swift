@@ -20,6 +20,7 @@ class AccountsCoordinator: Coordinator {
     override func start() {
         viewModel.coordinator = self
         let view = AccountsView(viewModel: viewModel)
+            .accessibility(identifier: "Accounts")
         let hostingController = UIHostingController(rootView: view)
         hostingController.modalPresentationStyle = .fullScreen
         hostingController.setBackground()

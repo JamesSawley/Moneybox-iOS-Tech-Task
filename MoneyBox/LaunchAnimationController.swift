@@ -21,6 +21,7 @@ class LaunchAnimationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.accessibilityIdentifier = "LaunchAnimation"
         view.backgroundColor = .grey
         
         view.addSubview(logoView)
