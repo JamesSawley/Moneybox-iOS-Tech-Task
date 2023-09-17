@@ -16,14 +16,24 @@ class LoginTextField: UITextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        CGRectInset(bounds, 16, 16)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        CGRectInset(bounds, 16, 16)
+    }
     
     func configure(with type: LoginFieldType) {
         tag = type.rawValue
         returnKeyType = type.returnKeyType
         isSecureTextEntry = type.isSecureTextEntry
         
-        layer.borderWidth = 1
-        layer.cornerRadius = 8
+        backgroundColor = .grey
+        
+        layer.borderWidth = 2
+        layer.cornerRadius = .cornerRadius
         
         updateForEditing()
     }

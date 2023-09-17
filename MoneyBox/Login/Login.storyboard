@@ -24,7 +24,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KNG-cV-Q8n">
-                                <rect key="frame" x="16" y="226" width="382" height="54.5"/>
+                                <rect key="frame" x="16" y="226" width="382" height="68.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcM-Ws-4jS">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -33,14 +33,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngx-PZ-nqz" customClass="LoginTextField" customModule="MoneyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="20.5" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="S7b-VA-wHe"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rxA-eW-sJQ">
-                                <rect key="frame" x="16" y="296.5" width="382" height="54.5"/>
+                                <rect key="frame" x="16" y="310.5" width="382" height="68.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ro-FB-kYW">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -49,20 +52,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wq-tW-c7I" customClass="LoginTextField" customModule="MoneyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="20.5" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="382" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pig-TE-RmN">
-                                <rect key="frame" x="16" y="775" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="765.5" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq5-8W-Gfx" customClass="RoundedButton" customModule="MoneyBox" customModuleProvider="target">
-                                <rect key="frame" x="16" y="811.5" width="382" height="34.5"/>
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xc9-XJ-6MU"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -80,6 +86,7 @@
                             <constraint firstItem="KNG-cV-Q8n" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="16" id="PFK-Ep-YZ6"/>
                             <constraint firstItem="Pig-TE-RmN" firstAttribute="leading" secondItem="KNG-cV-Q8n" secondAttribute="leading" id="Vv0-ES-JZD"/>
                             <constraint firstItem="KNG-cV-Q8n" firstAttribute="top" secondItem="uXR-TJ-fy2" secondAttribute="bottom" constant="64" id="Xbb-Gj-YaF"/>
+                            <constraint firstItem="6wq-tW-c7I" firstAttribute="height" secondItem="ngx-PZ-nqz" secondAttribute="height" id="aPO-Iw-KS7"/>
                             <constraint firstItem="Uq5-8W-Gfx" firstAttribute="top" secondItem="Pig-TE-RmN" secondAttribute="bottom" constant="16" id="ca9-aR-7n1"/>
                             <constraint firstItem="rxA-eW-sJQ" firstAttribute="trailing" secondItem="KNG-cV-Q8n" secondAttribute="trailing" id="d68-Fk-xzv"/>
                             <constraint firstItem="uXR-TJ-fy2" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="dsH-Rw-9QR"/>
