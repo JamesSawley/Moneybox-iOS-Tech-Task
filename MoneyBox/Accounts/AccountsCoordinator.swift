@@ -23,21 +23,29 @@ class AccountsCoordinator: Coordinator {
         let hostingController = UIHostingController(rootView: view)
         hostingController.modalPresentationStyle = .fullScreen
         hostingController.setBackground()
-        rootViewController.present(hostingController, animated: true)
+        rootViewController.present(hostingController, animated: true) {
+            self.rootViewController.viewControllers = []
+        }
     }
     
     override func finish() {
+        self.delegate?.didFinish(from: self)
         rootViewController.presentedViewController?.dismiss(animated: true)
-        delegate?.didFinish(from: self)
     }
 }
 
 extension AccountsCoordinator {
     func showDetail(for account: AccountSummary) {
         let viewModel = AccountDetailsViewModel(accountSummary: account)
+        viewModel.coordinator = self
         let view = AccountDetailsView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: view)
         hostingController.setBackground()
+        if #available(iOS 15.0, *) {
+            if let sheet = hostingController.sheetPresentationController {
+                sheet.detents = [.medium()]
+            }
+        }
         rootViewController.presentedViewController?.present(hostingController, animated: true)
     }
     
