@@ -26,7 +26,6 @@
 		CB9E08D22AB708BC006F5611 /* UserDefaultsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08D12AB708BC006F5611 /* UserDefaultsType.swift */; };
 		CB9E08D42AB70918006F5611 /* UserDefaultsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08D32AB70918006F5611 /* UserDefaultsMock.swift */; };
 		CB9E08DC2AB70A24006F5611 /* MoneyBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08DB2AB70A24006F5611 /* MoneyBoxUITests.swift */; };
-		CB9E08DE2AB70A24006F5611 /* MoneyBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E08DD2AB70A24006F5611 /* MoneyBoxUITestsLaunchTests.swift */; };
 		CBC616BE2AB3651600420E5B /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616BD2AB3651600420E5B /* LoginTextField.swift */; };
 		CBC616C12AB3654F00420E5B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C02AB3654F00420E5B /* RoundedButton.swift */; };
 		CBC616C32AB365B800420E5B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC616C22AB365B800420E5B /* UIColor+Extension.swift */; };
@@ -95,7 +94,6 @@
 		CB9E08D32AB70918006F5611 /* UserDefaultsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMock.swift; sourceTree = "<group>"; };
 		CB9E08D92AB70A24006F5611 /* MoneyBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9E08DB2AB70A24006F5611 /* MoneyBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxUITests.swift; sourceTree = "<group>"; };
-		CB9E08DD2AB70A24006F5611 /* MoneyBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBC616BD2AB3651600420E5B /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		CBC616C02AB3654F00420E5B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CBC616C22AB365B800420E5B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -228,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				CB9E08DB2AB70A24006F5611 /* MoneyBoxUITests.swift */,
-				CB9E08DD2AB70A24006F5611 /* MoneyBoxUITestsLaunchTests.swift */,
 			);
 			path = MoneyBoxUITests;
 			sourceTree = "<group>";
@@ -489,7 +486,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB9E08DE2AB70A24006F5611 /* MoneyBoxUITestsLaunchTests.swift in Sources */,
 				CB9E08DC2AB70A24006F5611 /* MoneyBoxUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
